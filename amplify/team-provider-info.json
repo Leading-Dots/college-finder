@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-collegefinderbackend-staging-21829-authRole",
+      "UnauthRoleArn": "arn:aws:iam::517223944896:role/amplify-collegefinderbackend-staging-21829-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::517223944896:role/amplify-collegefinderbackend-staging-21829-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-collegefinderbackend-staging-21829-deployment",
+      "UnauthRoleName": "amplify-collegefinderbackend-staging-21829-unauthRole",
+      "StackName": "amplify-collegefinderbackend-staging-21829",
+      "StackId": "arn:aws:cloudformation:ap-south-1:517223944896:stack/amplify-collegefinderbackend-staging-21829/bf3641c0-ff08-11ef-9dba-02745a8db149",
+      "AmplifyAppId": "d3vrghe6bc4tyr"
+    },
+    "categories": {
+      "auth": {
+        "collegefinderbackend": {}
+      }
+    }
+  }
+}

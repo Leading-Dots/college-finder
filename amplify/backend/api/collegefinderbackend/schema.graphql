@@ -1,0 +1,28 @@
+enum Status {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+type Course @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  courseName: String
+  studentID: ID! @index(name: "byStudent")
+  collegeID: ID! @index(name: "byCollege")
+}
+
+type College @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  collegeName: String
+  Students: [Student] @hasMany(indexName: "byCollege", fields: ["id"])
+  Courses: [Course] @hasMany(indexName: "byCollege", fields: ["id"])
+}
+
+type Student @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  studentId: String
+  studentName: String
+  collegeID: ID! @index(name: "byCollege")
+  Courses: [Course] @hasMany(indexName: "byStudent", fields: ["id"])
+  profileStatus: Status
+}
